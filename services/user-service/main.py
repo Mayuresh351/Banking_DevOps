@@ -58,10 +58,8 @@ def create_user(user: User):
         "balance": float(new_user[3]),
         "created_at": new_user[4],
     }
-    
-    
-    
-@app.get("/users/{user_id}")
+
+
 def get_user(user_id: int):
     connection = get_connection()
     cursor = connection.cursor()
