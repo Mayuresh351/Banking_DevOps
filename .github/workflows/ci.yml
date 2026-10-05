@@ -32,3 +32,11 @@ jobs:
           pip install -r requirements.txt
           PYTHONPATH=. pytest
           flake8 main.py
+
+      - name: Build user service Docker image
+        run: |
+          docker build -t banking-user-service:ci ./services/user-service
+
+      - name: Build transaction service Docker image
+        run: |
+          docker build -t banking-transaction-service:ci ./services/transaction-service
