@@ -47,6 +47,7 @@ jobs:
           image-ref: banking-user-service:ci
           severity: CRITICAL,HIGH
           ignore-unfixed: true
+          scanners: vuln
           exit-code: "1"
 
       - name: Scan transaction service image
@@ -55,4 +56,5 @@ jobs:
           image-ref: banking-transaction-service:ci
           severity: CRITICAL,HIGH
           ignore-unfixed: true
+          scanners: vuln
           exit-code: "1"
